@@ -121,10 +121,10 @@ export type DiagnosticResponse = {
   };
 };
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api").replace(/\/$/, "");
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL ?? "/api").replace(/\/$/, "");
 
 export async function fetchDiagnostic(includeTerms?: string[], excludeTerms?: string[]) {
-  const url = new URL(`${API_BASE_URL}/demo/`);
+  const url = new URL(`${API_BASE_URL}/demo/`, window.location.origin);
   if (includeTerms?.length) url.searchParams.set("include_terms", includeTerms.join("\n"));
   if (excludeTerms?.length) url.searchParams.set("exclude_terms", excludeTerms.join("\n"));
 
