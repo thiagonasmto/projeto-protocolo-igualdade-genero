@@ -121,7 +121,7 @@ export type DiagnosticResponse = {
   };
 };
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL ?? "/api").replace(/\/$/, "");
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL ?? "/_/backend/api").replace(/\/$/, "");
 
 export async function fetchDiagnostic(includeTerms?: string[], excludeTerms?: string[]) {
   const url = new URL(`${API_BASE_URL}/demo/`, window.location.origin);

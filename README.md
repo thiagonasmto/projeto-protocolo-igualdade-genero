@@ -6,10 +6,23 @@ Dashboard Next.js com API Django REST para diagnostico de equidade de genero em 
 
 O projeto ja inclui a configuracao de deploy na raiz:
 
-- `vercel.json` constroi o frontend em `frontend/` e publica o Django em `/api/*`.
+- `vercel.json` constroi o frontend em `frontend/` e publica o Django em `/_/backend/api/*`.
+- `experimentalServices` declara o frontend em `/` e o backend em `/_/backend`, como exigido pela tela de deploy da Vercel para multiplos servicos.
 - `api/index.py` expoe o WSGI do Django como funcao Python serverless.
 - `requirements.txt` instala as dependencias Python do backend.
-- O frontend usa `/api` por padrao em producao, entao nao precisa configurar `NEXT_PUBLIC_API_URL` quando tudo estiver no mesmo projeto Vercel.
+- O frontend usa `/_/backend/api` por padrao em producao, entao nao precisa configurar `NEXT_PUBLIC_API_URL` quando tudo estiver no mesmo projeto Vercel.
+
+Para publicar em producao pela CLI, rode na raiz:
+
+```bash
+npm run deploy
+```
+
+Para criar um deploy de preview:
+
+```bash
+npm run deploy:preview
+```
 
 Variaveis recomendadas no painel da Vercel:
 

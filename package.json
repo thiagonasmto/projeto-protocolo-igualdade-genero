@@ -1,0 +1,11 @@
+{
+  "name": "projeto-protocolo-igualdade",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "deploy": "npx --yes vercel --prod",
+    "deploy:preview": "npx --yes vercel"
+  }
+}
