@@ -2,10 +2,12 @@
   "version": 2,
   "experimentalServices": {
     "frontend": {
+      "framework": "nextjs",
       "root": ".",
       "routePrefix": "/"
     },
     "backend": {
+      "framework": "django",
       "root": "backend",
       "routePrefix": "/_/backend"
     }
