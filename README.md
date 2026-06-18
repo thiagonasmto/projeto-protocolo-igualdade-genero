@@ -8,8 +8,7 @@ O projeto ja inclui a configuracao de deploy na raiz:
 
 - `vercel.json` constroi o frontend em `frontend/` e publica o Django em `/_/backend/api/*`.
 - `experimentalServices` declara o frontend em `/` e o backend em `/_/backend`, como exigido pela tela de deploy da Vercel para multiplos servicos.
-- `api/index.py` expoe o WSGI do Django como funcao Python serverless.
-- `requirements.txt` instala as dependencias Python do backend.
+- `backend/requirements.txt` instala as dependencias Python do backend.
 - O frontend usa `/_/backend/api` por padrao em producao, entao nao precisa configurar `NEXT_PUBLIC_API_URL` quando tudo estiver no mesmo projeto Vercel.
 
 Para publicar em producao pela CLI, rode na raiz:
