@@ -3,7 +3,7 @@
   "experimentalServices": {
     "frontend": {
       "framework": "nextjs",
-      "root": ".",
+      "root": "frontend",
       "routePrefix": "/"
     },
     "backend": {
@@ -12,10 +12,6 @@
       "routePrefix": "/_/backend"
     }
   },
-  "installCommand": "npm --prefix frontend ci",
-  "buildCommand": "npm --prefix frontend run build",
-  "outputDirectory": "frontend/.next",
-  "framework": "nextjs",
   "rewrites": [
     {
       "source": "/api/(.*)",
